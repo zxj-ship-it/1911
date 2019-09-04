@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../base/react.min.js"></script>
+  <!-- 提供了react对象 -->
+  <script src="../base/react-dom.min.js"></script>
+  <!--  提供reactdom‘对象-->
+  <script src="../base/browser.min.js"></script>
+  <!-- 帮助浏览器解析jsx javascriptxml   -->
+  <title>Document</title>
+  <style>
+   .red{
+     background: red;
+   }
+  </style>
+</head>
+<body>
+  <div id='app'>
+
+  </div>
+  <script type='text/babel'>
+    let Component = React.createClass({
+      name:'韩梅梅',
+      show:false,
+      hide:true,
+      renderP(){
+        if(this.show){
+            return (
+              
+                <p className='red'>渲染</p>  
+            
+            )
+        }else{
+          return 
+        }
+      },
+      render() {
+        console.log(this)
+          return(
+            <div>
+            {/* {this.show?<p className='red'>hehe</p>:''}*/}
+           {/* {!this.show||<p className='red'>hehe</p>}
+            {this.hide||<p className='red'>hehe</p>} */}
+            {this.renderP()}
+            </div>
+          )
+      },
+    })
+    ReactDOM.render(<Component/>,app)
+  </script>
+
+</body>
+</html>

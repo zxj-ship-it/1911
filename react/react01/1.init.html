@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../base/react.min.js"></script>
+  <!-- 提供了react对象 -->
+  <script src="../base/react-dom.min.js"></script>
+  <!--  提供reactdom‘对象-->
+  <script src="../base/browser.min.js"></script>
+  <!-- 帮助浏览器解析jsx javascriptxml   -->
+  <title>Document</title>
+</head>
+<body>
+  <div id='app'>
+
+  </div>
+  <script type="text/babel">
+  // 创建一个组件  虚拟dom
+  // var app=123
+   let Hehe = React.createClass({
+     render(){
+       return (<div> 
+                  <h1>hehe</h1>
+                  <hr/>
+                  <p>hehe</p>
+               </div>)
+     }
+   })
+
+   //将虚拟dom 转化为虚拟dom
+  //  ReactDOM.render(<Hehe></Hehe>,document.getElementById('app'))
+  //  ReactDOM.render(<Hehe></Hehe>,app)
+   ReactDOM.render(<Hehe/>,app)
+  //  xhtml  标签要闭合  必须有根元素
+  //  html
+  </script>
+</body>
+</html>
